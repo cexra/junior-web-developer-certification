@@ -1,0 +1,11 @@
+version: 1.0
+runtime: php81
+build:
+  commands:
+    build:
+      - chmod +x startup.sh
+run:
+  command: ./startup.sh
+  network:
+    port: 80
+    env: APP_POR
