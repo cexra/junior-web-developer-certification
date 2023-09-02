@@ -31,6 +31,9 @@
                             Nomor Identitas
                         </th>
                         <th scope="col" class="px-6 py-3">
+                            Email
+                        </th>
+                        <th scope="col" class="px-6 py-3">
                             Jenis Kelamin
                         </th>
                         <th scope="col" class="px-6 py-3">
@@ -57,6 +60,7 @@
                                 $id = $row['id'];
                                 $nama_pemesan = $row['nama_pemesan'];
                                 $nomor_identitas = $row['nomor_identitas'];
+                                $email = $row['email'];
                                 $jenis_kelamin = $row['jenis_kelamin'];
                                 $tipe_kamar = $row['tipe_kamar'];
                                 $durasi_penginapan = $row['durasi_penginapan'];
@@ -75,6 +79,9 @@
                                             '.$nomor_identitas.'
                                         </td>
                                         <td class="px-6 py-4">
+                                            '.$email.'
+                                        </td>
+                                        <td class="px-6 py-4">
                                             '.$jenis_kelamin.'
                                         </td>
                                         <td class="px-6 py-4">
@@ -84,10 +91,10 @@
                                             '.$durasi_penginapan.'
                                         </td>
                                         <td class="px-6 py-4">
-                                            '.$discount.'
+                                            '.$discount.' %
                                         </td>
                                         <td class="px-6 py-4">
-                                            '.$total_bayar.'
+                                            Rp. '.$total_bayar.'
                                         </td>
                                     </tr>
                                 ';

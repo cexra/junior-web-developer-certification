@@ -70,3 +70,17 @@ function changeHarga() {
     document.getElementById("harga").value = "Rp. 3.000.000";
   }
 }
+
+function convertToRupiah(num) {
+  let rupiah = "";
+  const numRef = num.toString().split("").reverse().join("");
+
+  for (let i = 0; i < numRef.length; i++) {
+    if (i % 3 == 0) {
+      rupiah += ".";
+    }
+    rupiah += numRef[i];
+  }
+
+  return "Rp. " + rupiah.split("").reverse().join("");
+}

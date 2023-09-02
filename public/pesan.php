@@ -5,6 +5,7 @@
     $nama=$_POST['nama'];
     $jenis_kelamin=$_POST['jenis-kelamin'];
     $nomor_identitas=$_POST['nomor-identitas'];
+    $email=$_POST['email'];
     $tipe_kamar=$_POST['tipe-kamar'];
     $tanggal=$_POST['tanggal'];
     $durasi=$_POST['durasi'];
@@ -17,7 +18,7 @@
         $discount = 10;
     }
 
-    $sql = "insert into `Pesanan` (nama_pemesan, nomor_identitas, jenis_kelamin, tipe_kamar, durasi_penginapan, discount, total_bayar) values('$nama', '$nomor_identitas', '$jenis_kelamin', '$tipe_kamar', '$durasi', '$discount', '$total_bayar')";
+    $sql = "insert into `Pesanan` (nama_pemesan, nomor_identitas, jenis_kelamin, tipe_kamar, durasi_penginapan, discount, total_bayar, email) values('$nama', '$nomor_identitas', '$jenis_kelamin', '$tipe_kamar', '$durasi', '$discount', '$total_bayar', '$email')";
     $result = mysqli_query($con, $sql);
 
     if($result) {
@@ -119,6 +120,22 @@
               placeholder="16 digit"
               required
               onchange="check16Digit(this)"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-zinc-950"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="name@gmail.com"
+              required
             />
           </div>
 
